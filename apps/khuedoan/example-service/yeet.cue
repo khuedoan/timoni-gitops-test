@@ -48,7 +48,7 @@
                 "stg"
             ]
             // Wait 1 day before continuing to the next stage
-            wait: "1d"
+            wait: "10s"
         },
         // We wanna deploy to low risk production groups first
         {
@@ -61,7 +61,7 @@
             ]
             // Wait a bit then continue to the next stage
             // Usually this must be enough for QA engineers to run tests
-            wait: "2h"
+            wait: "20s"
         },
         // Same as the previous one
         {
@@ -71,7 +71,7 @@
                 "la1"
             ]
             // And wait more for smoke tests and let it bake, and come back tomorrow
-            wait: "1d"
+            wait: "30s"
         },
         // The next day, continue to higher risk production groups
         {
